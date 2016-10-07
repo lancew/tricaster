@@ -1,0 +1,78 @@
+<html>
+<head>
+    <script type="text/javascript">
+    function big_screen_to(target) {
+        var connection = new WebSocket('ws://192.168.2.80:5951');
+        var string_command = false;
+        connection.onopen = function () {};
+        switch (target){
+            case 'pgm':
+                string_command = "<shortcut name='v7_b_row_named_input' value='3' />\n<shortcut name='v7_auto'/>\n";
+                break;
+            case 'tatami1':
+                string_command = "<shortcut name='v7_b_row_named_input' value='6' />\n<shortcut name='v7_auto'/>\n";
+                break;
+            case 'tatami2':
+                string_command = "<shortcut name='v7_b_row_named_input' value='7' />\n<shortcut name='v7_auto'/>\n";
+                break;
+        }
+        if (string_command) {
+            connection.send(string_command);
+        }
+    }
+
+    function stream_to(target) {
+        var connection = new WebSocket('ws://192.168.2.80:5951');
+        var string_command = false;
+        connection.onopen = function () {};
+        switch (target){
+            case 'replay':
+                string_command = "<shortcut name='main_b_row_named_input' value='v8' />\n<shortcut name='main_auto'/>\n";
+                break;
+            case 'studio':
+                string_command = "<shortcut name='main_b_row_named_input' value='v8' />\n<shortcut name='main_auto'/>\n";
+                break;
+            case 'tatami1':
+                string_command = "<shortcut name='main_b_row_named_input' value='v8' />\n<shortcut name='main_auto'/>\n";
+                break;
+            case 'tatami2':
+                string_command = "<shortcut name='main_b_row_named_input' value='v8' />\n<shortcut name='main_auto'/>\n";
+                break;
+        }
+        if (string_command) {
+            connection.send(string_command);
+        }
+    }
+    </script>
+</head>
+<body>
+    <h1>IJF Tricaster Remote</h1>
+    <h2>Stream Controls</h2>
+    <ul>
+        <li>
+            <a href="#" onclick="stream_to('replay')">Replay</a>
+        </li>
+        <li>
+            <a href="#" onclick="stream_to('studio')">Studio</a>
+        </li>
+        <li>
+            <a href="#" onclick="stream_to('tatami1')">Tatami 1</a>
+        </li>
+        <li>
+            <a href="#" onclick="stream_to('tatami2')">Tatami 2</a>
+        </li>
+    </ul>
+
+    <h2>Big Screen Controls</h2>
+    <ul>
+        <li>
+            <a href="#" onclick="big_screen_to('pgm')">PGM</a>
+        </li>
+        <li>
+            <a href="#" onclick="big_screen_to('tatami1')">Tatami 1</a>
+        </li>
+        <li>
+            <a href="#" onclick="big_screen_to('tatami2')">Tatami 2</a>
+        </li>
+</body>
+</html>
