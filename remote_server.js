@@ -10,6 +10,9 @@ const PORT=8080;
 function handleRequest(request, response){
     var string_command;
     switch (request.url){
+        case '/pgm':
+            string_command = "<shortcut name='main_b_row_named_input' value='3' />\n<shortcut name='main_auto'/>\n";
+            break;
         case '/replay':
             string_command = "<shortcut name='main_b_row_named_input' value='ddr1' />\n<shortcut name='main_auto'/>\n";
             break;

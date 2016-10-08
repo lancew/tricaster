@@ -27,6 +27,9 @@
         var remote_server_url = false;
         var oReq = new XMLHttpRequest();
         switch (target){
+            case 'pgm':
+                remote_server_url = '/pgm';
+                break;
             case 'replay':
                 remote_server_url = '/replay';
                 break;
@@ -62,6 +65,9 @@
         </li>
         <li>
             <a href="#" onclick="stream_to('tatami2')">Tatami 2</a>
+        </li>
+        <li>
+            <a href="#" onclick="stream_to('pgm')">PGM</a>
         </li>
     </ul>
 
