@@ -2,45 +2,47 @@
 <head>
     <script type="text/javascript">
     function big_screen_to(target) {
-        var connection = new WebSocket('ws://192.168.2.80:5951');
-        var string_command = false;
+        var remote_server_url = false;
+        var oReq = new XMLHttpRequest();
         connection.onopen = function () {};
         switch (target){
             case 'pgm':
-                string_command = "<shortcut name='v7_b_row_named_input' value='3' />\n<shortcut name='v7_auto'/>\n";
+                remote_server_url = '/big_pgm';
                 break;
             case 'tatami1':
-                string_command = "<shortcut name='v7_b_row_named_input' value='6' />\n<shortcut name='v7_auto'/>\n";
+                remote_server_url = '/big_tatami1';
                 break;
             case 'tatami2':
-                string_command = "<shortcut name='v7_b_row_named_input' value='7' />\n<shortcut name='v7_auto'/>\n";
+                remote_server_url = '/big_tatami2';
                 break;
         }
         if (string_command) {
-            connection.send(string_command);
+            oReq.open("GET", 'http://localhost:8080' + remote_server_url);
+            oReq.send();
         }
     }
 
     function stream_to(target) {
-        var connection = new WebSocket('ws://192.168.2.80:5951');
-        var string_command = false;
-        connection.onopen = function () {};
+
+        var remote_server_url = false;
+        var oReq = new XMLHttpRequest();
         switch (target){
             case 'replay':
-                string_command = "<shortcut name='main_b_row_named_input' value='v8' />\n<shortcut name='main_auto'/>\n";
+                remote_server_url = '/replay';
                 break;
             case 'studio':
-                string_command = "<shortcut name='main_b_row_named_input' value='v8' />\n<shortcut name='main_auto'/>\n";
+                remote_server_url = '/studio';
                 break;
             case 'tatami1':
-                string_command = "<shortcut name='main_b_row_named_input' value='v8' />\n<shortcut name='main_auto'/>\n";
+                remote_server_url = '/tatami1';
                 break;
             case 'tatami2':
-                string_command = "<shortcut name='main_b_row_named_input' value='v8' />\n<shortcut name='main_auto'/>\n";
+                remote_server_url = '/tatami2';
                 break;
         }
-        if (string_command) {
-            connection.send(string_command);
+        if (remote_server_url) {
+            oReq.open("GET", 'http://localhost:8080' + remote_server_url);
+            oReq.send();
         }
     }
     </script>
