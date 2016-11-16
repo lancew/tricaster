@@ -24,3 +24,7 @@ Then on Mix Effect 7 (Jumbotron output):
 * input 6 = contest area 1 (Referee replay)
 * input 7 = contest area 2 (Referee replay)
 
+Build the electron apps:
+
+cd electron
+electron-packager . --all
