@@ -1,28 +1,8 @@
 <html>
 <head>
     <script type="text/javascript">
-    function big_screen_to(target) {
-        var remote_server_url = false;
-        var oReq = new XMLHttpRequest();
-        connection.onopen = function () {};
-        switch (target){
-            case 'pgm':
-                remote_server_url = '/big_pgm';
-                break;
-            case 'tatami1':
-                remote_server_url = '/big_tatami1';
-                break;
-            case 'tatami2':
-                remote_server_url = '/big_tatami2';
-                break;
-        }
-        if (string_command) {
-            oReq.open("GET", 'http://localhost:8080' + remote_server_url);
-            oReq.send();
-        }
-    }
 
-    function stream_to(target) {
+    function tricaster_to(target) {
 
         var remote_server_url = false;
         var oReq = new XMLHttpRequest();
@@ -42,6 +22,15 @@
             case 'tatami2':
                 remote_server_url = '/tatami2';
                 break;
+            case 'bigPgm':
+                remote_server_url = '/bigPgm';
+                break;
+            case 'bigTatami1':
+                remote_server_url = '/bigTatami1';
+                break;
+            case 'bigTatami2':
+                remote_server_url = '/bigTatami2';
+                break;
         }
         if (remote_server_url) {
             oReq.open("GET", 'http://localhost:8080' + remote_server_url);
@@ -55,32 +44,32 @@
     <h2>Stream Controls</h2>
     <ul>
         <li>
-            <a href="#" onclick="stream_to('replay')">Replay</a>
+            <a href="#" onclick="tricaster_to('replay')">Replay</a>
         </li>
         <li>
-            <a href="#" onclick="stream_to('studio')">Studio</a>
+            <a href="#" onclick="tricaster_to('studio')">Studio</a>
         </li>
         <li>
-            <a href="#" onclick="stream_to('tatami1')">Tatami 1</a>
+            <a href="#" onclick="tricaster_to('tatami1')">Tatami 1</a>
         </li>
         <li>
-            <a href="#" onclick="stream_to('tatami2')">Tatami 2</a>
+            <a href="#" onclick="tricaster_to('tatami2')">Tatami 2</a>
         </li>
         <li>
-            <a href="#" onclick="stream_to('pgm')">PGM</a>
+            <a href="#" onclick="tricaster_to('pgm')">PGM</a>
         </li>
     </ul>
 
     <h2>Big Screen Controls</h2>
     <ul>
         <li>
-            <a href="#" onclick="big_screen_to('pgm')">PGM</a>
+            <a href="#" onclick="tricaster_to('bigPgm')">PGM</a>
         </li>
         <li>
-            <a href="#" onclick="big_screen_to('tatami1')">Tatami 1</a>
+            <a href="#" onclick="tricaster_to('bigTatami1')">Tatami 1</a>
         </li>
         <li>
-            <a href="#" onclick="big_screen_to('tatami2')">Tatami 2</a>
+            <a href="#" onclick="tricaster_to('bigTatami2')">Tatami 2</a>
         </li>
 </body>
 </html>

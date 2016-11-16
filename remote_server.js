@@ -25,13 +25,14 @@ function handleRequest(request, response){
         case '/tatami2':
             string_command = "<shortcut name='main_b_row_named_input' value='v2' />\n<shortcut name='main_auto'/>\n";
             break;
-        case '/big_tatami1':
+        case '/bigTatami1':
+            console.log('bigTatami1');
             string_command = "<shortcut name='v7_b_row_named_input' value='6' />\n<shortcut name='v7_auto'/>\n";
             break;
-        case '/big_tatami2':
+        case '/bigTatami2':
             string_command = "<shortcut name='v7_b_row_named_input' value='7' />\n<shortcut name='v7_auto'/>\n";
             break;
-        case '/big_pgm':
+        case '/bigPgm':
             string_command = "<shortcut name='v7_b_row_named_input' value='3' />\n<shortcut name='v7_auto'/>\n";
             break;
     }
