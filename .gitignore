@@ -1,3 +1,10 @@
 Remote_Control_SDK.pdf
 node_modules/
 electron/node_modules/
+electron/IJF_Tricaster_Controller-darwin-x64/
+electron/IJF_Tricaster_Controller-linux-armv7l/
+electron/IJF_Tricaster_Controller-linux-ia32/
+electron/IJF_Tricaster_Controller-linux-x64/
+electron/IJF_Tricaster_Controller-mas-x64/
+electron/IJF_Tricaster_Controller-win32-ia32/
+electron/IJF_Tricaster_Controller-win32-x64/
