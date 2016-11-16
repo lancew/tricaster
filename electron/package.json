@@ -1,0 +1,21 @@
+{
+  "name": "IJF_Tricaster_Controller",
+  "version": "1.0.0",
+  "description": "Minimal Remote control app for IJF Tricaster",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "IJF",
+    "judo",
+    "newtek",
+    "tricaster"
+  ],
+  "author": "Lance Wicks",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^1.4.1"
+  }
+}
