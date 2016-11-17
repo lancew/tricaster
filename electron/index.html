@@ -1,5 +1,14 @@
 <html>
 <head>
+    <style type="text/css">
+        body
+        {
+            font: caption;
+            color: WindowText;
+            background-color: Window;
+            border: 2px solid ActiveBorder;
+        }
+    </style>
     <script type="text/javascript">
 
     function tricaster_to(target) {
@@ -40,36 +49,19 @@
     </script>
 </head>
 <body>
+    <center>
     <h1>IJF Tricaster Remote</h1>
     <h2>Stream Controls</h2>
-    <ul>
-        <li>
-            <a href="#" onclick="tricaster_to('replay')">Replay</a>
-        </li>
-        <li>
-            <a href="#" onclick="tricaster_to('studio')">Studio</a>
-        </li>
-        <li>
-            <a href="#" onclick="tricaster_to('tatami1')">Tatami 1</a>
-        </li>
-        <li>
-            <a href="#" onclick="tricaster_to('tatami2')">Tatami 2</a>
-        </li>
-        <li>
-            <a href="#" onclick="tricaster_to('pgm')">PGM</a>
-        </li>
-    </ul>
+            <button id='pgm' onclick="tricaster_to('pgm')">PGM</button>
+            <button id='replay' onclick="tricaster_to('replay')">Replay</button>
+            <button id='studio' onclick="tricaster_to('studio')">Studio</button>
+            <button id='tatami1' onclick="tricaster_to('tatami1')">Tatami 1</button>
+            <button id='tatami2' onclick="tricaster_to('tatami2')">Tatami 2</button>
 
     <h2>Big Screen Controls</h2>
-    <ul>
-        <li>
-            <a href="#" onclick="tricaster_to('bigPgm')">PGM</a>
-        </li>
-        <li>
-            <a href="#" onclick="tricaster_to('bigTatami1')">Tatami 1</a>
-        </li>
-        <li>
-            <a href="#" onclick="tricaster_to('bigTatami2')">Tatami 2</a>
-        </li>
+            <button id='bigPgm' onclick="tricaster_to('bigPgm')">PGM</button>
+            <button id='bigTatami1' onclick="tricaster_to('bigTatami1')">Tatami 1</button>
+            <button id='bigTatami2' onclick="tricaster_to('bigTatami2')">Tatami 2</button>
+    </center>
 </body>
 </html>
