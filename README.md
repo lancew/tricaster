@@ -1,7 +1,7 @@
 # tricaster
 Experimentations with the Newtek Tricaster
 
-![Image of Tricaster App](https://github.com/lancew/tricaster/tricaster.png)
+![Image of Tricaster App](tricaster/tricaster.png)
 
 Initial test was using the tricaster webserver to get the preview images from the inputs on a webpage. See tricaster.html (which assumes tricaster is on 192.168.2.80)
 
