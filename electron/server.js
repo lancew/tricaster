@@ -9,7 +9,7 @@ var PORT=8080;
 //We need a function which handles requests and send response
 function handleRequest(request, response){
     var string_command;
-    switch (request.url){    
+    switch (request.url){
     case '/pgm':
         string_command = '<shortcut name=\'main_b_row_named_input\' value=\'3\' />\n<shortcut name=\'main_auto\'/>\n';
         break;
@@ -25,12 +25,24 @@ function handleRequest(request, response){
     case '/tatami2':
         string_command = '<shortcut name=\'main_b_row_named_input\' value=\'v2\' />\n<shortcut name=\'main_auto\'/>\n';
         break;
+    case '/tatami3':
+        string_command = '<shortcut name=\'main_b_row_named_input\' value=\'v3\' />\n<shortcut name=\'main_auto\'/>\n';
+        break;
+    case '/tatami4':
+        string_command = '<shortcut name=\'main_b_row_named_input\' value=\'v4\' />\n<shortcut name=\'main_auto\'/>\n';
+        break;
     case '/bigTatami1':
         string_command = '<shortcut name=\'v7_b_row_named_input\' value=\'6\' />\n<shortcut name=\'v7_auto\'/>\n';
         break;
     case '/bigTatami2':
         string_command = '<shortcut name=\'v7_b_row_named_input\' value=\'7\' />\n<shortcut name=\'v7_auto\'/>\n';
         break;
+    case '/bigTatami3':
+        string_command = '<shortcut name=\'v7_b_row_named_input\' value=\'8\' />\n<shortcut name=\'v7_auto\'/>\n';
+        break;
+    case '/bigTatami4':
+        string_command = '<shortcut name=\'v7_b_row_named_input\' value=\'9\' />\n<shortcut name=\'v7_auto\'/>\n';
+        break;             
     case '/bigPgm':
         string_command = '<shortcut name=\'v7_b_row_named_input\' value=\'3\' />\n<shortcut name=\'v7_auto\'/>\n';
         break;
@@ -38,6 +50,7 @@ function handleRequest(request, response){
 
     client.connect({port: '5951', host:'192.168.2.80'}, function() {
         if(string_command){
+            console.log(string_command);
             client.write(string_command);
         }
         client.destroy();

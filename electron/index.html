@@ -31,6 +31,12 @@
             case 'tatami2':
                 remote_server_url = '/tatami2';
                 break;
+            case 'tatami3':
+                remote_server_url = '/tatami3';
+                break;
+            case 'tatami4':
+                remote_server_url = '/tatami4';
+                break;
             case 'bigPgm':
                 remote_server_url = '/bigPgm';
                 break;
@@ -39,6 +45,12 @@
                 break;
             case 'bigTatami2':
                 remote_server_url = '/bigTatami2';
+                break;
+            case 'bigTatami3':
+                remote_server_url = '/bigTatami3';
+                break;
+            case 'bigTatami4':
+                remote_server_url = '/bigTatami4';
                 break;
         }
         if (remote_server_url) {
@@ -51,17 +63,26 @@
 <body>
     <center>
     <h1>IJF Tricaster Remote</h1>
+    <img src = 'ijf.png' width = '100px'>
     <h2>Stream Controls</h2>
+           
+            <button id='tatami1' onclick="tricaster_to('tatami1')">Tatami 1</button>
+            <button id='tatami2' onclick="tricaster_to('tatami2')">Tatami 2</button>
+            <button id='tatami3' onclick="tricaster_to('tatami3')">Tatami 3</button>
+            <button id='tatami4' onclick="tricaster_to('tatami4')">Tatami 4</button>
+            <br>
             <button id='pgm' onclick="tricaster_to('pgm')">PGM</button>
             <button id='replay' onclick="tricaster_to('replay')">Replay</button>
             <button id='studio' onclick="tricaster_to('studio')">Studio</button>
-            <button id='tatami1' onclick="tricaster_to('tatami1')">Tatami 1</button>
-            <button id='tatami2' onclick="tricaster_to('tatami2')">Tatami 2</button>
 
     <h2>Big Screen Controls</h2>
-            <button id='bigPgm' onclick="tricaster_to('bigPgm')">PGM</button>
+            
             <button id='bigTatami1' onclick="tricaster_to('bigTatami1')">Tatami 1</button>
             <button id='bigTatami2' onclick="tricaster_to('bigTatami2')">Tatami 2</button>
+            <button id='bigTatami3' onclick="tricaster_to('bigTatami3')">Tatami 3</button>
+            <button id='bigTatami4' onclick="tricaster_to('bigTatami4')">Tatami 4</button>
+            <br>
+            <button id='bigPgm' onclick="tricaster_to('bigPgm')">PGM</button>
     </center>
 </body>
 </html>
