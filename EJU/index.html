@@ -1,0 +1,63 @@
+<html>
+<head>
+    <style type="text/css">
+        body
+        {
+            font: caption;
+            color: WindowText;
+            background-color: Window;
+            border: 2px solid ActiveBorder;
+        }
+    </style>
+    <script type="text/javascript">
+
+    function tricaster_to(target) {
+
+        var remote_server_url = false;
+        var oReq = new XMLHttpRequest();
+        switch (target){
+            case 'me1':
+                remote_server_url = '/me1';
+                break;
+            case 'me2':
+                remote_server_url = '/me2';
+                break;
+            case 'me3':
+                remote_server_url = '/me3';
+                break;
+            case 'me4':
+                remote_server_url = '/me4';
+                break;
+            case 'ddr1':
+                remote_server_url = '/ddr1';
+                break;
+            case 'ddr2':
+                remote_server_url = '/ddr2';
+                break; 
+        }
+        if (remote_server_url) {
+            oReq.open("GET", 'http://localhost:8080' + remote_server_url);
+            oReq.send();
+        }
+    }
+    </script>
+</head>
+<body style ="background-image: url(background-blue.jpg); background-size: cover;">
+    <center>
+    <h1>EJU Tricaster Remote</h1>
+    <img src = 'logo_header.png'>
+    <h2>Stream Controls</h2>
+           
+            <button id='tatami1' onclick="tricaster_to('me1')">Tatami 1</button>
+            <button id='tatami2' onclick="tricaster_to('me2')">Tatami 2</button>
+            <p/>
+            <button id='pgm' onclick="tricaster_to('me3')">PGM</button>
+            <button id='studio' onclick="tricaster_to('me4')">Studio</button> 
+             <p/>
+            <button id='ddr1' onclick="tricaster_to('ddr1')">DDR1</button>
+            <button id='ddr2' onclick="tricaster_to('ddr2')">DDR2</button>
+           
+            
+    </center>
+</body>
+</html>

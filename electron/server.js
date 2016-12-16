@@ -42,13 +42,13 @@ function handleRequest(request, response){
         break;
     case '/bigTatami4':
         string_command = '<shortcut name=\'v7_b_row_named_input\' value=\'9\' />\n<shortcut name=\'v7_auto\'/>\n';
-        break;             
+        break;
     case '/bigPgm':
         string_command = '<shortcut name=\'v7_b_row_named_input\' value=\'3\' />\n<shortcut name=\'v7_auto\'/>\n';
         break;
     }
 
-    client.connect({port: '5951', host:'192.168.2.80'}, function() {
+    client.connect({port: '5951', host:'192.168.2.90'}, function() {
         if(string_command){
             console.log(string_command);
             client.write(string_command);
