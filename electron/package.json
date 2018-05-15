@@ -16,6 +16,6 @@
   "author": "Lance Wicks",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^1.4.1"
+    "electron": "^2.0.0"
   }
 }
