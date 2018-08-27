@@ -33,7 +33,7 @@
                 break;
             case 'ddr2':
                 remote_server_url = '/ddr2';
-                break; 
+                break;
         }
         if (remote_server_url) {
             oReq.open("GET", 'http://localhost:8080' + remote_server_url);
@@ -47,17 +47,19 @@
     <h1>EJU Tricaster Remote</h1>
     <img src = 'logo_header.png'>
     <h2>Stream Controls</h2>
-           
+
             <button id='tatami1' onclick="tricaster_to('me1')">Tatami 1</button>
             <button id='tatami2' onclick="tricaster_to('me2')">Tatami 2</button>
+            <button id='tatami3' onclick="tricaster_to('me3')">Tatami 3</button>
+            <button id='tatami4' onclick="tricaster_to('me4')">Tatami 4</button>
             <p/>
             <button id='pgm' onclick="tricaster_to('me3')">PGM</button>
-            <button id='studio' onclick="tricaster_to('me4')">Studio</button> 
+            <button id='studio' onclick="tricaster_to('me4')">Studio</button>
              <p/>
             <button id='ddr1' onclick="tricaster_to('ddr1')">DDR1</button>
             <button id='ddr2' onclick="tricaster_to('ddr2')">DDR2</button>
-           
-            
+
+
     </center>
 </body>
 </html>

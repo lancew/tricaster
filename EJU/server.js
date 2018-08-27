@@ -20,7 +20,7 @@ function handleRequest(request, response){
         string_command = '<shortcut name=\'main_b_row_named_input\' value=\'input3\' />\n<shortcut name=\'main_auto\'/>\n';
         break;
     case '/me4':
-        string_command = '<shortcut name=\'main_b_row_named_input\' value=\'v4\' />\n<shortcut name=\'main_auto\'/>\n';
+        string_command = '<shortcut name=\'main_b_row_named_input\' value=\'input4\' />\n<shortcut name=\'main_auto\'/>\n';
         break;
     case '/ddr1':
             string_command = '<shortcut name=\'main_b_row_named_input\' value=\'ddr\' />\n<shortcut name=\'main_auto\'/>\n';
@@ -30,7 +30,7 @@ function handleRequest(request, response){
             break;
     }
 
-    client.connect({port: '5951', host:'192.168.2.90'}, function() {
+    client.connect({port: '5951', host:'192.168.2.80'}, function() {
         if(string_command){
             console.log(string_command);
             client.write(string_command);

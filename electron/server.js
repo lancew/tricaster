@@ -48,7 +48,7 @@ function handleRequest (request, response) {
       break
   }
 
-  client.connect({port: '5951', host: '192.168.2.90'}, function () {
+  client.connect({port: '5951', host: '192.168.2.80'}, function () {
     if (string_command) {
       console.log(string_command)
       client.write(string_command)
